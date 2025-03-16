@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Soft premium colors -->
+    <color name="background_soft">#e3e3e3</color> <!-- White as the primary background -->
+    <color name="text_premium">#000000</color> <!-- Dark Red for text -->
+    <color name="text_muted">#000000</color> <!-- Muted text -->
+    <color name="accent_warm">#000000</color> <!-- Tomato red for accents -->
+
+    <!-- Button colors - more variation in shades -->
+    <color name="button_primary">#D32F2F</color> <!-- Strong red for primary button -->
+    <color name="button_primary_hover">#C2185B</color> <!-- Lighter red/pink for hover effect -->
+    <color name="button_confirm">#B71C1C</color> <!-- Darker red for confirm button -->
+    <color name="button_cancel">#FF5722</color> <!-- Orange-red for cancel button -->
+    <color name="button_disabled">#BDBDBD</color> <!-- Light grey for disabled button -->
+
+    <!-- Supporting colors -->
+    <color name="card_background">#FFFFFF</color> <!-- White for card background -->
+    <color name="divider_soft">#ffe6e6</color> <!-- Light red for dividers -->
+    <color name="white">#FFFFFF</color> <!-- White -->
+</resources>
