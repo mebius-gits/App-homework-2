@@ -30,8 +30,8 @@
     <!-- Pizza Hero Image -->
     <androidx.cardview.widget.CardView
         android:id="@+id/pizzaImageCard"
-        android:layout_width="370dp"
-        android:layout_height="212dp"
+        android:layout_width="378dp"
+        android:layout_height="158dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
@@ -44,14 +44,22 @@
 
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:background="@color/card_background">
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/pizza_image" />
+        </FrameLayout>
     </androidx.cardview.widget.CardView>
 
     <!-- Order Summary Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/orderSummaryCard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="395dp"
+        android:layout_height="264dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
