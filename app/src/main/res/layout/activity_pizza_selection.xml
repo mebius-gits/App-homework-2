@@ -99,7 +99,8 @@
                   android:layout_weight="1"
                   android:gravity="center_vertical"
                   android:orientation="vertical"
-                  android:paddingStart="16dp">
+                  android:paddingStart="16dp"
+                  tools:ignore="ExtraText">
 
                 <RadioButton
                     android:id="@+id/radioMargherita"
@@ -119,19 +120,20 @@
 
                 <!-- Quantity buttons -->
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="165dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                  <Button
+                  <TextView
                       android:id="@+id/decreaseMargherita"
-                      android:layout_width="60dp"
+                      android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:scrollbarDefaultDelayBeforeFade="200"
+                      android:paddingStart="20dp"
+                      android:paddingEnd="20dp"
                       android:text="-"
-                      android:textSize="20sp" />
+                      android:textSize="30sp" />
 
                   <TextView
                       android:id="@+id/quantityMargherita"
@@ -142,16 +144,28 @@
                       android:text="1"
                       android:textSize="20sp" />
 
-                  <Button
+                  <TextView
                       android:id="@+id/increaseMargherita"
-                      android:layout_width="60dp"
+                      android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
+                      android:paddingStart="20dp"
+                      android:paddingEnd="20dp"
                       android:text="+"
                       android:textSize="20sp" />
                 </LinearLayout>
 
-              </LinearLayout>
+                <TextView
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="蕃茄、莫札瑞拉起司"
+                    android:textColor="#000000"  <!-- 使用黑色 --><![CDATA[
+                    android:textSize="30sp" />
+
+
+              ]]></LinearLayout>
             </TableRow>
+
 
             <!-- Row 2 (Pepperoni Pizza) -->
             <TableRow
@@ -199,12 +213,14 @@
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                  <Button
+                  <TextView
                       android:id="@+id/decreasePepperoni"
-                      android:layout_width="60dp"
+                      android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
+                      android:paddingStart="20dp"
+                      android:paddingEnd="20dp"
                       android:text="-"
-                      android:textSize="20sp" />
+                      android:textSize="30sp" />
 
                   <TextView
                       android:id="@+id/quantityPepperoni"
@@ -215,15 +231,26 @@
                       android:text="1"
                       android:textSize="20sp" />
 
-                  <Button
+                  <TextView
                       android:id="@+id/increasePepperoni"
-                      android:layout_width="60dp"
+                      android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
+                      android:paddingStart="20dp"
+                      android:paddingEnd="20dp"
                       android:text="+"
                       android:textSize="20sp" />
                 </LinearLayout>
 
-              </LinearLayout>
+                <TextView
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="蕃茄、莫札瑞拉起司"
+                    android:textColor="#000000"  <!-- 使用黑色 --><![CDATA[
+                    android:textSize="30sp" />
+
+
+              ]]></LinearLayout>
             </TableRow>
 
             <!-- Row 3 (Vegetarian Pizza) -->
@@ -272,12 +299,14 @@
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                  <Button
+                  <TextView
                       android:id="@+id/decreaseVegetarian"
-                      android:layout_width="61dp"
+                      android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
+                      android:paddingStart="20dp"
+                      android:paddingEnd="20dp"
                       android:text="-"
-                      android:textSize="20sp" />
+                      android:textSize="30sp" />
 
                   <TextView
                       android:id="@+id/quantityVegetarian"
@@ -288,16 +317,27 @@
                       android:text="1"
                       android:textSize="20sp" />
 
-                  <Button
+                  <TextView
                       android:id="@+id/increaseVegetarian"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
+                      android:paddingStart="20dp"
+                      android:paddingEnd="20dp"
                       android:text="+"
                       android:textSize="20sp" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="蕃茄、莫札瑞拉起司"
+                    android:textColor="#000000"  <!-- 使用黑色 --><![CDATA[
+                    android:textSize="30sp" />
 
-              </LinearLayout>
+
+              ]]></LinearLayout>
             </TableRow>
+
 
             <!-- Row 4 (Hawaiian Pizza) -->
             <TableRow
@@ -345,12 +385,14 @@
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
-                  <Button
+                  <TextView
                       android:id="@+id/decreaseHawaiian"
-                      android:layout_width="59dp"
+                      android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
+                      android:paddingStart="20dp"
+                      android:paddingEnd="20dp"
                       android:text="-"
-                      android:textSize="20sp" />
+                      android:textSize="30sp" />
 
                   <TextView
                       android:id="@+id/quantityHawaiian"
@@ -361,16 +403,27 @@
                       android:text="1"
                       android:textSize="20sp" />
 
-                  <Button
+                  <TextView
                       android:id="@+id/increaseHawaiian"
                       android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
+                      android:paddingStart="20dp"
+                      android:paddingEnd="20dp"
                       android:text="+"
                       android:textSize="20sp" />
                 </LinearLayout>
+                <TextView
+                    android:layout_width="163dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="蕃茄、莫札瑞拉起司"
+                    android:textColor="#000000"  <!-- 使用黑色 --><![CDATA[
+                    android:textSize="30sp" />
 
-              </LinearLayout>
+
+              ]]></LinearLayout>
             </TableRow>
+
 
           </TableLayout>
 
