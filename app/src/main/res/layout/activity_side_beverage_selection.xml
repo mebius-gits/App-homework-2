@@ -1,10 +1,762 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="@color/background_soft"
     tools:context=".SideBeverageSelectionActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:elevation="0dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:background="@android:color/transparent"
+            app:title="選擇配料與飲料"
+            app:titleTextAppearance="@style/AppBarTitle"
+            app:titleTextColor="@color/text_premium" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+        app:layout_constraintBottom_toTopOf="@+id/confirmButton"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:useDefaultMargins="true">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    app:contentPadding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:src="@drawable/french_fries"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="薯條" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="香脆薯條"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="4dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupFries"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioFriesLarge"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="大：$50"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editFriesLargeQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioFriesMedium"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="中：$30"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editFriesMediumQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioFriesSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="小：$20"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editFriesSmallQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    app:contentPadding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:src="@drawable/onion_rings"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="洋蔥圈" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="酥炸洋蔥圈"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="4dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupOnionRings"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioOnionRingsLarge"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="大：$45"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editOnionRingsLargeQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioOnionRingsMedium"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="中：$30"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editOnionRingsMediumQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioOnionRingsSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="小：$20"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editOnionRingsSmallQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    app:contentPadding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:src="@drawable/chicken_nuggets"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="雞塊" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="黃金雞塊"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="4dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupChickenNuggets"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioChickenNuggetsLarge"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="大：$80"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editChickenNuggetsLargeQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioChickenNuggetsMedium"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="中：$60"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editChickenNuggetsMediumQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioChickenNuggetsSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="小：$50"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editChickenNuggetsSmallQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    app:contentPadding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:src="@drawable/coca_cola"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="可樂" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="可口可樂"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="4dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupCola"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioColaLarge"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="大：$45"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editColaLargeQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioColaMedium"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="中：$30"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editColaMediumQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioColaSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="小：$20"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editColaSmallQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    app:contentPadding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:src="@drawable/sprite"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="雪碧" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="雪碧"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="4dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupSprite"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioSpriteLarge"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="大：$45"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editSpriteLargeQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioSpriteMedium"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="中：$30"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editSpriteMediumQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioSpriteSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="小：$20"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editSpriteSmallQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="2dp"
+                    app:contentPadding="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:src="@drawable/orange_juice"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="柳橙汁" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="鮮榨柳橙汁"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginBottom="4dp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroupOrangeJuice"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioOrangeJuiceLarge"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="大：$45"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editOrangeJuiceLargeQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioOrangeJuiceMedium"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="中：$30"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editOrangeJuiceMediumQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <RadioButton
+                                    android:id="@+id/radioOrangeJuiceSmall"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="小：$20"
+                                    android:textSize="14sp"
+                                    android:buttonTint="@color/text_premium"
+                                    android:background="@null" />
+
+                                <EditText
+                                    android:id="@+id/editOrangeJuiceSmallQuantity"
+                                    android:layout_width="48dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:hint="份數"
+                                    android:textSize="14sp"
+                                    android:textAlignment="center" />
+                            </LinearLayout>
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </GridLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        android:backgroundTint="#928B8B"
+        android:text="確認選擇"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
