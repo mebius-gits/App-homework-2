@@ -51,15 +51,15 @@
                 android:id="@+id/imageView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/pizza_image" />
+                app:srcCompat="@drawable/pizza_cat" />
         </FrameLayout>
     </androidx.cardview.widget.CardView>
 
     <!-- Order Summary Card -->
     <androidx.cardview.widget.CardView
         android:id="@+id/orderSummaryCard"
-        android:layout_width="395dp"
-        android:layout_height="264dp"
+        android:layout_width="365dp"
+        android:layout_height="270dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
@@ -100,7 +100,7 @@
                 <TextView
                     android:id="@+id/selectedPizza"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="100dp"
                     android:layout_marginStart="8dp"
                     android:text="瑪格麗特 x 1"
                     android:textAppearance="@style/OrderItemValue"
@@ -168,9 +168,9 @@
         android:id="@+id/optionsLabel"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="24dp"
         android:text="選擇您的訂單項目"
         android:textAppearance="@style/SectionTitle"
         android:textColor="@color/text_premium"
@@ -181,13 +181,16 @@
         app:layout_constraintTop_toBottomOf="@+id/orderSummaryCard" />
 
     <!-- Side and Beverage Selection Button -->
+
+    <!-- Bottom checkout bar -->
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnPizzaSelection"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="24dp"
         android:backgroundTint="@color/button_primary"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"
@@ -201,19 +204,17 @@
         app:iconPadding="16dp"
         app:iconSize="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/optionsLabel" />
-
-    <!-- Bottom checkout bar -->
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSideBeverageSelection"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="24dp"
         android:backgroundTint="@color/button_primary"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"
@@ -231,47 +232,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPizzaSelection" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/checkoutCard"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:cardCornerRadius="24dp"
-        app:cardElevation="4dp"
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirmOrder"
+        android:layout_width="361dp"
+        android:layout_height="67dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/white"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="送出訂購"
+        android:textAppearance="@style/ButtonText"
+        android:textColor="@color/button_confirm"
+        android:textSize="20dp"
+        app:cornerRadius="24dp"
+        app:elevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/button_confirm"
-            android:orientation="horizontal"
-            android:padding="16dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_weight="1"
-                android:text="確認訂單"
-                android:textAppearance="@style/BottomBarText"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnConfirmOrder"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/white"
-                android:paddingStart="24dp"
-                android:paddingEnd="24dp"
-                android:text="送出訂購"
-                android:textAppearance="@style/ButtonText"
-                android:textColor="@color/button_confirm"
-                app:cornerRadius="24dp"
-                app:elevation="0dp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSideBeverageSelection" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

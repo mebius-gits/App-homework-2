@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_marginVertical="16dp"
+    android:orientation="vertical">
+
+    <!-- Pizza Item Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <!-- Pizza Image -->
+        <ImageView
+            android:id="@+id/pizzaImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pizza_flavor_1" />
+
+        <!-- Pizza Details Layout -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingStart="24dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/pizzaName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="瑪格麗特披薩"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pizzaPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="價格：$300"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pizzaDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="蕃茄、莫札瑞拉起司"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <!-- Radio button for selection -->
+        <RadioButton
+            android:id="@+id/pizzaRadio"
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+    </LinearLayout>
+
+    <!-- Quantity input with increase and decrease buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="數量："
+            android:textSize="16sp"
+            android:paddingEnd="8dp" />
+
+        <!-- Decrease button -->
+        <TextView
+            android:id="@+id/decreaseButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="-"
+            android:textSize="24sp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:contentDescription="Decrease Quantity"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="12dp" />
+
+        <!-- Quantity EditText with larger touch target -->
+        <EditText
+            android:id="@+id/pizzaAmount"
+            android:layout_width="80dp"
+            android:layout_height="48dp"
+            android:inputType="number"
+            android:maxLines="1"
+            android:text="1"
+            android:textSize="18sp"
+            android:importantForAccessibility="yes"
+            android:contentDescription="Amount of pizza"
+            android:gravity="center"
+            android:padding="10dp" />
+
+        <!-- Increase button -->
+        <TextView
+            android:id="@+id/increaseButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="+"
+            android:textSize="24sp"
+            android:textColor="?android:attr/textColorPrimary"
+            android:contentDescription="Increase Quantity"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="12dp" />
+    </LinearLayout>
+
+</LinearLayout>

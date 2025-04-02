@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Soft premium colors -->
-    <color name="background_soft">#e3e3e3</color> <!-- White as the primary background -->
+    <color name="background_soft">#E2E2E2</color> <!-- White as the primary background -->
     <color name="text_premium">#000000</color> <!-- Dark Red for text -->
     <color name="text_muted">#000000</color> <!-- Muted text -->
     <color name="accent_warm">#000000</color> <!-- Tomato red for accents -->

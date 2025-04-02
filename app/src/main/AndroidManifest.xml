@@ -11,21 +11,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
-        <activity
-            android:name=".SideBeverageSelectionActivity"
-            android:exported="false" />
-        <activity
-            android:name=".PizzaSelectionActivity"
-            android:exported="false" />
+
+        <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Pizza Selection Activity -->
+        <activity
+            android:name=".PizzaSelectionActivity"
+            android:exported="false" />
+
+        <!-- Side Beverage Selection Activity -->
+        <activity
+            android:name=".SideBeverageSelectionActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
