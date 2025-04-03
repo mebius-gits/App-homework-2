@@ -1,6 +1,7 @@
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.TextView
@@ -16,7 +17,7 @@ class PizzaAdapter(private val pizzaList: List<PizzaItem>) :
         val name: TextView = view.findViewById(R.id.pizzaName)
         val price: TextView = view.findViewById(R.id.pizzaPrice)
         val description: TextView = view.findViewById(R.id.pizzaDescription)
-        val radioButton: RadioButton = view.findViewById(R.id.pizzaRadio)
+        val checkbox: CheckBox = view.findViewById(R.id.pizzaCheckbox)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PizzaViewHolder {

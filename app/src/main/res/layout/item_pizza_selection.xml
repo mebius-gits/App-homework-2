@@ -54,11 +54,12 @@
 
         </LinearLayout>
 
-        <!-- Radio button for selection -->
-        <RadioButton
-            android:id="@+id/pizzaRadio"
+        <CheckBox
+            android:id="@+id/pizzaCheckbox"
             android:layout_width="35dp"
-            android:layout_height="35dp" />
+            android:layout_height="35dp"
+            android:layout_marginStart="8dp"
+            android:contentDescription="選擇此披薩" />
     </LinearLayout>
 
     <!-- Quantity input with increase and decrease buttons -->
