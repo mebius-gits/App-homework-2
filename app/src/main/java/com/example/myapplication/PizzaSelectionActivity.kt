@@ -1,7 +1,10 @@
 package com.example.myapplication
 
 import PizzaAdapter
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -33,5 +36,21 @@ class PizzaSelectionActivity : AppCompatActivity() {
 
         pizzaAdapter = PizzaAdapter(pizzas)
         recyclerView.adapter = pizzaAdapter
+
+        val confirmButton = findViewById<Button>(R.id.confirmButton)
+        confirmButton.setOnClickListener {
+            val selected = pizzaAdapter.getSelectedPizzas()
+
+            // 轉換成字串顯示
+            val result = selected.joinToString("\n") {
+                "   ${it.name} x ${it.quantity} : \$${it.quantity * it.price}"
+            }
+
+            val finalResult = if (result.isBlank()) "無" else result
+            val intent = Intent()
+            intent.putExtra("pizza_result", finalResult)
+            setResult(Activity.RESULT_OK, intent)
+            finish()
+        }
     }
 }

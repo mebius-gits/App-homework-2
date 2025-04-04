@@ -58,7 +58,7 @@
                 android:id="@+id/selectedPizza"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="披薩：瑪格麗特 x 1"
+                android:text="披薩 : 無"
                 android:textSize="18sp"
                 android:textColor="#B03A1E"
                 android:layout_marginTop="10dp" />
@@ -67,7 +67,7 @@
                 android:id="@+id/selectedSideBeverage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="附餐：無"
+                android:text="附餐 : 無"
                 android:textSize="18sp"
                 android:textColor="#B03A1E"
                 android:layout_marginTop="6dp" />
@@ -76,7 +76,7 @@
                 android:id="@+id/price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="總價：$250"
+                android:text="總價：$0"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="#4A2C18"

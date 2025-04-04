@@ -9,7 +9,7 @@
     <!-- Pizza Item Layout -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -24,7 +24,7 @@
 
         <!-- Pizza Details Layout -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:paddingStart="24dp"
@@ -56,8 +56,8 @@
 
         <CheckBox
             android:id="@+id/pizzaCheckbox"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="8dp"
             android:contentDescription="選擇此披薩" />
     </LinearLayout>
@@ -85,12 +85,12 @@
             android:gravity="center"
             android:text="-"
             android:textSize="24sp"
-            android:textColor="?android:attr/textColorPrimary"
-            android:contentDescription="Decrease Quantity"
+            android:textColor="#A0A0A0"
+            android:enabled="false"
             android:background="?android:attr/selectableItemBackground"
             android:padding="12dp" />
 
-        <!-- Quantity EditText with larger touch target -->
+        <!-- Quantity EditText -->
         <EditText
             android:id="@+id/pizzaAmount"
             android:layout_width="80dp"
@@ -99,8 +99,8 @@
             android:maxLines="1"
             android:text="1"
             android:textSize="18sp"
-            android:importantForAccessibility="yes"
-            android:contentDescription="Amount of pizza"
+            android:enabled="false"
+            android:textColor="#A0A0A0"
             android:gravity="center"
             android:padding="10dp" />
 
@@ -112,8 +112,8 @@
             android:gravity="center"
             android:text="+"
             android:textSize="24sp"
-            android:textColor="?android:attr/textColorPrimary"
-            android:contentDescription="Increase Quantity"
+            android:textColor="#A0A0A0"
+            android:enabled="false"
             android:background="?android:attr/selectableItemBackground"
             android:padding="12dp" />
     </LinearLayout>

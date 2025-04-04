@@ -1,40 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Soft premium colors -->
     <color name="background_soft">#E2E2E2</color> <!-- White as the primary background -->
     <color name="text_premium">#000000</color> <!-- Dark Red for text -->
     <color name="text_muted">#000000</color> <!-- Muted text -->
     <color name="accent_warm">#000000</color> <!-- Tomato red for accents -->
-
-    <!-- Button colors - more variation in shades -->
-    <color name="button_primary">#D32F2F</color> <!-- Strong red for primary button -->
-    <color name="button_primary_hover">#C2185B</color> <!-- Lighter red/pink for hover effect -->
-    <color name="button_confirm">#B71C1C</color> <!-- Darker red for confirm button -->
-    <color name="button_cancel">#FF5722</color> <!-- Orange-red for cancel button -->
-    <color name="button_disabled">#BDBDBD</color> <!-- Light grey for disabled button -->
-
-    <!-- Supporting colors -->
-    <color name="card_background">#F5F5F5</color> <!-- White for card background -->
-    <color name="divider_soft">#ffe6e6</color> <!-- Light red for dividers -->
-    <color name="white">#FFFFFF</color>
-    <!-- 新增的顏色 -->
-    <color name="card_background_lighter">#FFF9F9F9</color>
-    <color name="card_background_darker">#FFF0F0F0</color> <!-- White -->
-
-    <!-- 您現有的顏色 -->
-    <!-- <color name="card_background">#FFF5F5F5</color> -->
-
-    <!-- <color name="background_soft">#FFF8F8F8</color> -->
-
-    <!-- <color name="text_premium">#FF2C2C2C</color> -->
-
-    <!-- <color name="text_muted">#FF808080</color> -->
-
-    <!-- <color name="accent_warm">#FFA0522D</color> -->
-
-    <!-- <color name="button_primary">#FFCD853F</color> -->
-
-    <!-- <color name="button_confirm">#FFD2691E</color> -->
-
-    <!-- <color name="white">#FFFFFFFF</color> -->
 </resources>

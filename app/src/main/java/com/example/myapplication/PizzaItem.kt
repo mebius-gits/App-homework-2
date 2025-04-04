@@ -4,5 +4,7 @@ data class PizzaItem(
     val name: String,
     val price: Int,
     val description: String,
-    val imageRes: Int
+    val imageResId: Int,
+    var isChecked: Boolean = false,
+    var quantity: Int = 1
 )
